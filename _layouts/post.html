@@ -6,11 +6,19 @@
  {% include head.html %}
   <body data-spy="scroll" data-target=".navbar" data-offset="120">    
    {% include nav.html %}
-<div class="blog-header"></div>  
-<section id="blog">       
-   {{ content }}
- </section>
-
+<div class="blog-header"></div>   
+            <section id="blog">
+            <article> 
+            <div class="container">
+  <div class="row">
+    <div class="span12">
+    <h2>{{ page.title }}</h2>  
+          <div class="date">posté le {{ page.date | date_to_long_string}}</div>
+   <p>{{ content }}</p>
+   <a href="/blog.html">« Retour</a>
+ </div></div></div>
+ </article>
+</section>
    {% include footer.html %}
 
    {% include jsfooter.html %}
