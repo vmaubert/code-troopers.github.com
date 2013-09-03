@@ -1,0 +1,19 @@
+---
+layout: blog
+title: Code Troopers
+---
+  {% for post in site.posts %}
+<article>
+<div class="container">
+	<div class="row">
+		<div class="span12">
+      		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      		<div class="date">posté le {{ post.date | date_to_long_string}}</div>
+      		<p>{{ post.excerpt }}</p>
+      		<a class="more" href="{{post.url}}">Lire plus »</a>
+      	</div>
+	</div>
+</div>
+
+</article>
+  {% endfor %}
